@@ -1,5 +1,8 @@
 # SSH Keychain command (above instant prompt, since it asks for password)
-eval $(keychain --quiet --eval ~/.ssh/mearchrkey)
+# Only attach keychain if the ssh-agent service is already active
+if systemctl --user is-active --quiet ssh-agent.service; then
+  eval $(keychain --quiet --eval ~/.ssh/dylinux_key)
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
