@@ -1,0 +1,20 @@
+* {
+    
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.8);
+    border-bottom: 0px solid #ffffff;
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#clock {
+    color: #A663E7;
+    background: #1A1B26;
+    margin: 5px 5px 5px 5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: normal;
+}
