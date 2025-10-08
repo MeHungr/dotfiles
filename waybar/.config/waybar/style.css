@@ -1,5 +1,4 @@
 * {
-    
 }
 
 window#waybar {
@@ -10,20 +9,93 @@ window#waybar {
     transition-duration: .5s;
 }
 
+#workspaces {
+    margin: 5px 1px 6px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: @textcolor3;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #A663E7;
+    background: #2C3043;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#taskbar {
+    background: #1A1B26;
+    margin: 6px 15px 6px 0px;
+    padding:0px;
+    border-radius: 15px;
+    border: 3px solid #2C3043;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#taskbar button {
+    margin:0;
+    border-radius: 15px;
+    padding: 0px 5px 0px 5px;
+}
+
 #clock {
     color: #A663E7;
     background: #1A1B26;
     margin: 5px 5px 5px 5px;
     padding: 4px 10px;
-    border-radius: 12px;
+    border-radius: 15px;
+    border: 3px solid #2C3043;
     font-weight: normal;
 }
 
-#pulseaudio{
+#pulseaudio {
     color: #A663E7;
     background: #1A1B26;
     margin: 5px 5px 5px 5px;
     padding: 4px 10px;
-    border-radius: 12px;
+    border-radius: 15px;
+    border: 3px solid #2C3043;
     font-weight: normal;
+}
+
+#tray {
+    background: #1A1B26;
+    margin: 5px 5px 5px 5px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    border: 3px solid #2C3043;
+}
+
+#custom-power {
+    margin: 5px 5px 5px 5px;
+    padding: 3px 10px;
+    background: #1A1B26;
+    border-radius: 300px;
+    border: 3px solid #2C3043;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#custom-power:hover {
+    background: #2C3043;
 }

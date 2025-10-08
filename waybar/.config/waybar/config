@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+        "wlr/taskbar"
     ],
     "modules-center": [
         "clock"
@@ -19,23 +20,38 @@
     ],
     // Modules configuration
      "hyprland/workspaces": {
-         "disable-scroll": true,
+         "on-scroll-down": "hyprctl dispatch workspace r+1",
+         "on-scroll-up": "hyprctl dispatch workspace r-1",
+         "on-click": "activate",
+         "active-only": false,
          "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}: {icon}",
+         "format": "{}",
          "format-icons": {
-             "urgent": "",
-             "active": "",
-             "default": ""
+             //"urgent": "",
+             //"active": "",
+             //"default": ""
+             "urgent": "",
+             "active": "",
+             "default": ""
+         },
+         "persistent-workspaces": {
+            "DP-1": [ 1 ],
+            "HDMI-A-1": [ 2, 3, 4],
          }
      },
+     "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "kitty"
+        ],
+     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 20,
         "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
     "clock": {
         "timezone": "America/New_York",
@@ -64,7 +80,7 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format" : " ⏻ ",
+        "format" : "⏻",
         "on-click": "wlogout",
 		"tooltip": false
     }
