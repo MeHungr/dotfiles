@@ -18,3 +18,12 @@ window#waybar {
     border-radius: 12px;
     font-weight: normal;
 }
+
+#pulseaudio{
+    color: #A663E7;
+    background: #1A1B26;
+    margin: 5px 5px 5px 5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: normal;
+}
