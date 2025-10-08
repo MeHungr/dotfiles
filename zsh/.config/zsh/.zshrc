@@ -45,5 +45,10 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 # ===========================================
 
+# ============ User Config ============
+bindkey -v # vi mode
+bindkey -M viins 'jj' vi-cmd-mode # Add 'jj' keybind for entering cmd mode
+# =====================================
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
