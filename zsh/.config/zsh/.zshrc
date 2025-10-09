@@ -9,6 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source $ZDOTDIR/zsh_keymap.zsh
+source $ZDOTDIR/zsh_aliases.zsh
 source $ZDOTDIR/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # ============ Setup ============
