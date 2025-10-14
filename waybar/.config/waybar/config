@@ -17,6 +17,7 @@
     "modules-right": [
         "pulseaudio",
         "tray",
+        "custom/notifications",
         "custom/power"
     ],
     // Modules configuration
@@ -87,8 +88,28 @@
 		"tooltip": false
     },
     "custom/appmenu": {
-    "format": "󰣇",
-    "on-click": "rofi -show drun -replace -show-icons",
-    "tooltip-format": "Open the application launcher"
+        "format": "󰣇",
+        "on-click": "rofi -show drun -replace -show-icons",
+        "tooltip-format": "Open the application launcher"
+    },
+    "custom/notifications": {
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "󱅫",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true,
+        "tooltip-format": "Open the notification center\nRight click to turn on Do Not Disturb!"
     }
 }
