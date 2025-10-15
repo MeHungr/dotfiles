@@ -65,10 +65,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "<span size='larger' rise='-1400'>{icon}</span> {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "<span size='larger' rise='-1400'></span> {volume}%",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {

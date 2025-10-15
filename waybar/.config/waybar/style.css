@@ -1,5 +1,5 @@
 * {
-    font-family: 'JetBrains Mono Nerd Font';
+    font-family: 'JetBrainsMono NFM';
 }
 
 window#waybar {
@@ -90,11 +90,11 @@ window#waybar {
 
 #custom-power {
     margin: 5px;
-    padding: 0px 12px 0px 8px;
+    padding: 0px 10px;
     background: #1A1B26;
     border-radius: 15px;
     border: 3px solid #2C3043;
-    font-size: 15px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 
@@ -104,11 +104,11 @@ window#waybar {
 
 #custom-appmenu {
     margin: 5px;
-    padding: 0px 12px 0px 8px;
+    padding: 0px 10px;
     background: #1A1B26;
     border-radius: 15px;
     border: 3px solid #2C3043;
-    font-size: 20px;
+    font-size: 25px;
     color: #FFFFFF;
 }
 
@@ -118,11 +118,11 @@ window#waybar {
 
 #custom-notifications {
     margin: 5px;
-    padding: 0px 12px 0px 8px;
+    padding: 0px 10px;
     background: #1A1B26;
     border-radius: 15px;
     border: 3px solid #2C3043;
-    font-size: 15px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 

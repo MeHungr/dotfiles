@@ -1,0 +1,224 @@
+@define-color cc-bg #16161d;
+@define-color noti-border-color #dcd7ba;
+@define-color noti-bg #11111b;
+@define-color noti-bg-darker #2b2b39;
+@define-color noti-bg-hover #1b1b2b;
+@define-color noti-bg-focus #1b1b1b;
+@define-color noti-close-bg #dcd7ba;
+@define-color noti-close-bg-hover #dcd7ba;
+@define-color text-color #dcd7ba;
+@define-color text-color-disabled #828282;
+@define-color bg-selected #7e9cd8;
+@define-color border-purple #bb9af7;
+@define-color border-blue #7aa2f7;
+@define-color red-base #c34043;
+@define-color red-hover #e46876;
+@define-color purple-base #bb9af7;
+@define-color blue-base #7aa2f7;
+
+* {
+  font-family: "JetBrainsMono NFM SemiBold", monospace;
+}
+
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+  opacity: 1;
+  background: @noti-bg-darker;
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification {
+  background: @cc-bg;
+  border: 2px solid @border-purple;
+  margin: 3px -2px 3px 0;
+}
+
+.notification:hover .close-button {
+  opacity: 1;
+}
+
+.close-button:hover {
+  background: @red-hover;
+  box-shadow: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.notification-action {
+  border: 2px solid @border-purple;
+  border-top: none;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  color: @blue-base;
+  background: @cc-bg;
+}
+
+.inline-reply-entry {
+  background: @noti-bg-darker;
+  color: @text-color;
+  caret-color: @text-color;
+  border: 1px solid @noti-border-color;
+}
+
+.inline-reply-button {
+  margin-top: 4px;
+  margin-left: 4px;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  color: @text-color;
+}
+
+.inline-reply-button:disabled {
+  background: transparent;
+  color: @text-color-disabled;
+  border: 1px solid transparent;
+}
+
+.inline-reply-button:hover {
+  background: @noti-bg-hover;
+}
+
+.summary {
+  font-family: "FiraCode";
+  font-size: 16px;
+  font-weight: 700;
+  background: transparent;
+  color: @purple-base;
+  text-shadow: none;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: 700;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+  font-family: "FiraCode";
+  font-size: 15px;
+  font-weight: 400;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+}
+
+.control-center {
+  background: @cc-bg;
+  opacity: 0.95;
+  border: 2px solid @border-blue;
+}
+
+.widget-title {
+  color: @border-purple;
+  background: @noti-bg-darker;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.widget-title>button {
+  font-size: 1rem;
+  color: @text-color;
+  background: @noti-bg;
+  box-shadow: none;
+}
+
+.widget-title>button:hover {
+  background: @red-base;
+  color: @cc-bg;
+}
+
+.widget-dnd {
+  background: @noti-bg-darker;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  font-size: large;
+  color: @blue-base;
+}
+
+.widget-dnd>label {
+  color: @border-purple;
+  font-size: large;
+}
+
+.widget-dnd>switch {
+  background: @blue-base;
+  border-radius: 15px;
+}
+
+.widget-dnd>switch:checked {
+  background: @red-base;
+}
+
+.widget-label>label {
+  font-size: 1rem;
+  color: @text-color;
+  margin: 10px;
+}
+
+.widget-buttons-grid {
+  font-size: x-large;
+  padding: 5px;
+  margin: 10px;
+  background: @noti-bg-darker;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  margin: 3px;
+  background: @cc-bg;
+  color: @text-color;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: @blue-base;
+  color: @cc-bg;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:checked {
+  background: @purple-base;
+  color: @cc-bg;
+}
+
+.widget-volume,
+.widget-backlight {
+  background: @noti-bg-darker;
+  padding: 5px;
+  margin: 5px 10px;
+  font-size: 2rem;
+  color: @border-purple;
+}
+
+.widget-volume slider {
+    background-color: @noti-bg-darker;
+    border: 1px solid #FFFFFF;
+}
+
+.widget-volume highlight {
+    background-color: @border-purple;
+}
+
+.widget-mpris {
+  color: @text-color;
+  background: @noti-bg-darker;
+  padding: 5px 10px;
+  margin: 5px 10px 5px 10px;
+  box-shadow: none;
+}
+
+.widget-mpris>box>button,
+.widget-mpris-player,
+.widget-mpris-album-art {
+  box-shadow: none;
+  padding: 5px 10px;
+  margin: 10px 0 0 0;
+}
