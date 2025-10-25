@@ -33,6 +33,14 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # prompt suse
 # ================================
 
+# ============ PATH ============ 
+export PATH=$PATH:$HOME/.local/bin
+# ==============================
+
+# ============ fpath ============
+fpath+=("$HOME/.local/share/zsh/site-functions")
+# ===============================
+
 # ============ Completions ============
 autoload -Uz compinit # Autocompletion
 compinit # Also autocompletion

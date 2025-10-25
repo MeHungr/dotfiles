@@ -1,4 +1,4 @@
-#files: 978	version: 5.9
+#files: 979	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -1000,6 +1000,7 @@ _comps=(
 'patch' '_patch'
 'patool' '_patool'
 'pax' '_pax'
+'pbctl' '_pbctl'
 'pcat' '_pack'
 'pcp-htop' '_htop'
 'pcred' '_pids'
@@ -2038,7 +2039,7 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _zargs _zattr _zcalc _zcalc_line _zcompile \
             _zed _zftp _zle _zmodload _zmv \
             _zparseopts _zpty _zsh-mime-handler _zsocket _zstyle \
-            _ztodo
+            _ztodo _pbctl
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
