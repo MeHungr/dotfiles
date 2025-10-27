@@ -35,6 +35,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # ============ PATH ============ 
 export PATH=$PATH:$HOME/.local/bin
+# Add go to path
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin
 # ==============================
 
 # ============ fpath ============
