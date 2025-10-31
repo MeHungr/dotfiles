@@ -22,6 +22,15 @@ zle_highlight=('paste:none')
 setopt nobeep
 # ===============================
 
+# ============ History ============
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=500000
+SAVEHIST=500000
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt BANG_HIST
+# =================================
+
 # ============ Plugins ============
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
