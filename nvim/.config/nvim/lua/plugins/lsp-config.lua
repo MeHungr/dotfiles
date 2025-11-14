@@ -40,16 +40,28 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.gopls.setup({
+                settings = {
+                    gopls = {
+                        ["ui.inlayhint.hints"] = {
+                            parameterNames = true,
+                        },
+                    },
+                },
                 capabilities = capabilities,
             })
             lspconfig.clangd.setup({
                 capabilities = capabilities,
             })
-           vim.keymap.set("n", "<leader>ci", vim.lsp.buf.hover, { desc = "Show hover info window" })
+            vim.keymap.set("n", "<leader>ci", vim.lsp.buf.hover, { desc = "Show hover info window" })
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action,
                 { desc = "Show code actions (vscode ctrl + .)" })
             vim.keymap.set("n", "<leader>ce", vim.diagnostic.open_float, { desc = "Show hover error info" })
+            vim.keymap.set("n", "<leader>ch", function()
+                local bufnr = 0
+                local is_on = vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr })
+                vim.lsp.inlay_hint.enable(not is_on, { bufnr = bufnr })
+            end, { desc = "Toggle inlay hints (current buffer)" })
         end,
     },
 }
