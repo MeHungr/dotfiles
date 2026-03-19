@@ -1,5 +1,5 @@
 # SSH Keychain command (above instant prompt, since it asks for password)
-eval $(keychain --quiet --eval --noask ~/.ssh/mearchrkey)
+eval $(keychain --quiet --eval ~/.ssh/mearchrkey)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
