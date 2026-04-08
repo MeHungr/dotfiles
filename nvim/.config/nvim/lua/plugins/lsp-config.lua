@@ -26,32 +26,29 @@ return {
 
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.jdtls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.bashls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.ansiblels.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.gopls.setup({
-                settings = {
-                    gopls = {
-                        ["ui.inlayhint.hints"] = {
-                            parameterNames = true,
+            local servers = {
+                lua_ls = {},
+                jdtls = {},
+                bashls = {},
+                ansiblels = {},
+                clangd = {},
+                gopls = {
+                    settings = {
+                        gopls = {
+                            ["ui.inlayhint.hints"] = {
+                                parameterNames = true,
+                            },
                         },
                     },
                 },
-                capabilities = capabilities,
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-            })
+            }
+
+            for server, config in pairs(servers) do
+                config.capabilities = capabilities
+                vim.lsp.config(server, config)
+                vim.lsp.enable(server)
+            end
+
             vim.keymap.set("n", "<leader>ci", vim.lsp.buf.hover, { desc = "Show hover info window" })
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action,
