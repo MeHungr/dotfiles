@@ -73,3 +73,5 @@ bindkey -M viins 'jj' vi-cmd-mode # Add 'jj' keybind for entering cmd mode
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+. "$HOME/.local/share/../bin/env"
