@@ -14,6 +14,6 @@ return {
             },
         })
 
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format the current file" })
+        vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format the current file" })
     end,
 }

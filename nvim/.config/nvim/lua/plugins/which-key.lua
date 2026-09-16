@@ -9,10 +9,11 @@ return {
 			{ "<leader>rj", group = "java specific" },
 			{ "<leader>t", group = "test" },
 			{ "<leader>f", group = "find" },
-			{ "<leader>g", group = "formatting" },
+			{ "<leader>g", group = "git" },
 			{ "<leader>c", group = "code" },
-      { "<leader>y", group = "terminal" },
-      { "<leader>b", group = "buffers" },
+            { "<leader>l", group = "LSP" },
+            { "<leader>y", group = "terminal" },
+            { "<leader>b", group = "buffers" },
 		})
 		wk.setup({
       triggers = { "<leader>" },
