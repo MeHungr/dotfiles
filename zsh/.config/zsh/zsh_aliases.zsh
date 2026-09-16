@@ -10,4 +10,5 @@ alias gaa='git add --all'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
+alias gs='git status'
 # =====================================
